@@ -14,6 +14,8 @@ function App() {
   const [playlist, setPlaylist] = useState([])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [backendStatus, setBackendStatus] = useState('checking')
+
+  
   
   const audioRef = useRef(null)
   const fileInputRef = useRef(null)

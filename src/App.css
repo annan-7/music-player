@@ -6,6 +6,8 @@
   box-sizing: border-box;
 }
 
+
+
 :root {
   --primary-gradient: linear-gradient(135deg, #5e6db1 0%, #764ba2 100%);
   --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);

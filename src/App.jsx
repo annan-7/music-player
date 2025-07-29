@@ -12,6 +12,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
   const [playlist, setPlaylist] = useState([])
+  
   const [currentIndex, setCurrentIndex] = useState(0)
   const [backendStatus, setBackendStatus] = useState('checking')
 

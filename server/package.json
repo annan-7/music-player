@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Backend server for music player with YouTube audio extraction",
   "main": "server.js",
+
+  
   "type": "module",
   "scripts": {
     "start": "node server.js",

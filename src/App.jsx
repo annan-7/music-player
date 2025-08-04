@@ -24,6 +24,8 @@ function App() {
 
   useEffect(() => {
     // Check backend status on mount
+
+    
     checkBackendStatus()
     
     const audio = audioRef.current

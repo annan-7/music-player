@@ -135,7 +135,7 @@ app.post('/api/extract-youtube', async (req, res) => {
           fs.unlinkSync(filepath);
         }
         res.status(500).json({ 
-          error: 'Failed to process audio. Please try again.',
+          error: 'Failed to process audio . Please try again or refresh the window.',
           details: err.message 
         });
       })

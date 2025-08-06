@@ -39,6 +39,9 @@ body {
   overflow-x: hidden;
 }
 
+
+
+
 /* Animated background particles */
 body::before {
   content: '';

@@ -140,6 +140,8 @@ app.post('/api/extract-youtube', async (req, res) => {
           error: 'Failed to process audio . Please try again or refresh the window.',
           details: err.message 
         });
+
+        
       })
       .pipe(writeStream);
 

@@ -59,6 +59,9 @@ function App() {
   }, [playlist, currentIndex])
 
   const checkBackendStatus = async () => {
+
+
+    
     try {
       const isHealthy = await youtubeExtractor.current.checkBackendHealth()
       setBackendStatus(isHealthy ? 'connected' : 'disconnected')

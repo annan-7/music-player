@@ -24,6 +24,8 @@ A modern, feature-rich music player built with React that can play local MP3 fil
 
 ### Installation
 
+
+
 1. **Clone or download the project**
    ```bash
    cd "music player"

@@ -50,6 +50,8 @@ function App() {
     audio.addEventListener('ended', handleEnded)
 
     return () => {
+
+      
       audio.removeEventListener('timeupdate', updateTime)
       audio.removeEventListener('loadedmetadata', updateDuration)
       audio.removeEventListener('ended', handleEnded)

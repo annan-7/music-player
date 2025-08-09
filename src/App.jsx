@@ -65,6 +65,8 @@ function App() {
     try {
       const isHealthy = await youtubeExtractor.current.checkBackendHealth()
       setBackendStatus(isHealthy ? 'connected' : 'disconnected')
+
+      
     } catch (error) {
       setBackendStatus('disconnected')
     }

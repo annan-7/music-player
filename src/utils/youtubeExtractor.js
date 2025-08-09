@@ -18,6 +18,8 @@ export class YouTubeExtractor {
       // Validate YouTube URL
       if (!this.isValidYouTubeUrl(youtubeUrl)) {
         throw new Error('Invalid YouTube URL');
+
+        
       }
 
       const response = await fetch(`${this.baseUrl}/api/extract-youtube`, {

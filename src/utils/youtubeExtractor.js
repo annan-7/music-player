@@ -25,6 +25,8 @@ export class YouTubeExtractor {
       const response = await fetch(`${this.baseUrl}/api/extract-youtube`, {
         method: 'POST',
         headers: {
+
+          
           'Content-Type': 'application/json',
         },
 

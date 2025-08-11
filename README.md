@@ -72,6 +72,9 @@ A modern, feature-rich music player built with React that can play local MP3 fil
    ```
    The backend will run on `http://localhost:3001`
 
+
+   
+
 2. **Start the frontend** (in another terminal):
    ```bash
    npm run dev

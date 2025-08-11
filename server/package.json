@@ -34,6 +34,7 @@
 
   
   "keywords": ["music", "player", "youtube", "audio", "extraction"],
+  
   "author": "Music Player",
   "license": "MIT"
 } 

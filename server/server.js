@@ -169,6 +169,8 @@ app.post('/api/extract-youtube', async (req, res) => {
 // Serve audio files
 app.get('/api/audio/:filename', (req, res) => {
   try {
+
+    
     const { filename } = req.params;
     const filepath = join(uploadsDir, filename);
 

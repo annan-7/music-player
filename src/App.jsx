@@ -70,6 +70,8 @@ function App() {
     } catch (error) {
       setBackendStatus('disconnected')
     }
+
+    
   }
 
   const handleFileUpload = (event) => {

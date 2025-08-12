@@ -76,6 +76,7 @@ function App() {
 
   const handleFileUpload = (event) => {
     const files = Array.from(event.target.files)
+    
     const validFiles = files.filter(file => audioUtils.isValidAudioFile(file))
     
     if (validFiles.length === 0) {

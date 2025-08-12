@@ -59,6 +59,9 @@ A modern, feature-rich music player built with React that can play local MP3 fil
    ```bash
    brew install ffmpeg
    ```
+
+
+   
    
    **Windows:**
    Download from [https://ffmpeg.org/download.html](https://ffmpeg.org/download.html)

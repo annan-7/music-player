@@ -173,6 +173,7 @@ app.get('/api/audio/:filename', (req, res) => {
     
     const { filename } = req.params;
     const filepath = join(uploadsDir, filename);
+    
 
     if (!fs.existsSync(filepath)) {
       return res.status(404).json({ error: 'Audio file not found' });

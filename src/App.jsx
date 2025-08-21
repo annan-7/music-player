@@ -80,6 +80,8 @@ function App() {
     const validFiles = files.filter(file => audioUtils.isValidAudioFile(file))
     
     if (validFiles.length === 0) {
+
+      
       setError('Please select valid audio files (MP3, WAV, OGG, AAC, FLAC)')
       return
     }

@@ -181,7 +181,9 @@ app.get('/api/audio/:filename', (req, res) => {
 
     // Set appropriate headers for audio streaming
     const stat = fs.statSync(filepath);
+
     const fileSize = stat.size;
+    
     const range = req.headers.range;
 
     if (range) {

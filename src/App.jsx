@@ -88,6 +88,8 @@ function App() {
 
     const newTracks = validFiles.map(file => ({
       name: file.name,
+
+      
       url: URL.createObjectURL(file),
       type: 'file',
       file: file,

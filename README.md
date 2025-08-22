@@ -31,6 +31,9 @@ A modern, feature-rich music player built with React that can play local MP3 fil
    cd "music player"
    ```
 
+
+   
+
 2. **Install frontend dependencies**
    ```bash
    npm install

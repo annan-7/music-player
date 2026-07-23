@@ -32,12 +32,8 @@ export class YouTubeExtractor {
         },
 
         
-        body: JSON.stringify({ 
-
-          
+        body: JSON.stringify({
           url: youtubeUrl,
-
-          
           format: 'mp3',
           quality: 'highestaudio'
         })

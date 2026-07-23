@@ -211,24 +211,7 @@ music player/
 ```
 
 ## 🤝 Contributing
+Currently not updating this project but if you want to contribute, go ahead!
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 🙏 Acknowledgments
-
-- [ytdl-core](https://github.com/fent/node-ytdl-core) for YouTube video downloading
-- [FFmpeg](https://ffmpeg.org/) for audio conversion
-- [React](https://reactjs.org/) for the frontend framework
-- [Express](https://expressjs.com/) for the backend framework
-
----
 
 **Note**: This application is for educational purposes. Please respect YouTube's terms of service and copyright laws when using this tool.

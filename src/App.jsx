@@ -29,7 +29,7 @@ function App() {
     checkBackendStatus()
     
     const audio = audioRef.current
-    if (!audio) return
+    if (!audio) return null
 
     const updateTime = () => setCurrentTime(audio.currentTime)
     const updateDuration = () => setDuration(audio.duration)
@@ -63,6 +63,7 @@ function App() {
 
     
     try {
+      //checking if youtube Extractor is working properly
       const isHealthy = await youtubeExtractor.current.checkBackendHealth()
       setBackendStatus(isHealthy ? 'connected' : 'disconnected')
 

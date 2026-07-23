@@ -19,7 +19,7 @@ app.use(cors({
   origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
   credentials: true
 }));
-app.use(express.json({ limit: '10mb' }));
+app.use(express.json({ limit: '100mb' }));
 app.use(express.static(join(__dirname, '../dist')));
 
 // Create uploads directory if it doesn't exist

@@ -33,10 +33,10 @@ const checkFFmpeg = () => {
   return new Promise((resolve) => {
     ffmpeg.getAvailableFormats((err) => {
       if (err) {
-        console.warn('⚠️  FFmpeg not available. YouTube extraction will not work.');
+        console.warn('FFmpeg not available. YouTube extraction will not work.');
         resolve(false);
       } else {
-        console.log('✅ FFmpeg is available');
+        console.log('FFmpeg is available');
         resolve(true);
       }
     });
@@ -82,7 +82,7 @@ app.post('/api/extract-youtube', async (req, res) => {
 
     // Check if file already exists
     if (fs.existsSync(filepath)) {
-      console.log(`✅ Audio file already exists: ${filename}`);
+      console.log(`Audio file already exists: ${filename}`);
       return res.json({
         success: true,
         audioUrl: `/api/audio/${filename}`,
@@ -96,7 +96,7 @@ app.post('/api/extract-youtube', async (req, res) => {
     const ffmpegAvailable = await checkFFmpeg();
     if (!ffmpegAvailable) {
       return res.status(500).json({ 
-        error: 'FFmpeg is not available. Please install FFmpeg to extract YouTube audio.' 
+        error: 'FFmpeg is not available. Please install FFmpeg npm i ffmpeg' 
       });
     }
 
@@ -119,7 +119,7 @@ app.post('/api/extract-youtube', async (req, res) => {
         console.log(`📊 Progress: ${progress.percent}%`);
       })
       .on('end', () => {
-        console.log(`✅ Audio extracted successfully: ${filename}`);
+        console.log(`Audio extracted successfully: ${filename}`);
         res.json({
           success: true,
           audioUrl: `/api/audio/${filename}`,
@@ -131,7 +131,7 @@ app.post('/api/extract-youtube', async (req, res) => {
 
       
       .on('error', (err) => {
-        console.error('❌ FFmpeg error:', err);
+        console.error('FFmpeg error:', err);
         // Clean up partial file
         if (fs.existsSync(filepath)) {
           fs.unlinkSync(filepath);
@@ -140,7 +140,7 @@ app.post('/api/extract-youtube', async (req, res) => {
 
 
           
-          error: 'Failed to process audio . Please try again or refresh the window.',
+          error: 'Failed to process audio . Please try again!',
           details: err.message 
         });
 
@@ -156,7 +156,7 @@ app.post('/api/extract-youtube', async (req, res) => {
       
 
   } catch (error) {
-    console.error('❌ YouTube extraction error:', error);
+    console.error('YouTube extraction error:', error);
 
     
     res.status(500).json({ 
@@ -209,7 +209,7 @@ app.get('/api/audio/:filename', (req, res) => {
       fs.createReadStream(filepath).pipe(res);
     }
   } catch (error) {
-    console.error('❌ Audio serving error:', error);
+    console.error('Audio serving error:', error);
     res.status(500).json({ error: 'Failed to serve audio file' });
   }
 });
@@ -232,7 +232,7 @@ app.get('/api/audio', (req, res) => {
     
     res.json({ files });
   } catch (error) {
-    console.error('❌ Error getting audio files:', error);
+    console.error('Error getting audio files:', error);
     res.status(500).json({ error: 'Failed to get audio files' });
   }
 });
@@ -248,10 +248,10 @@ app.delete('/api/audio/:filename', (req, res) => {
     }
 
     fs.unlinkSync(filepath);
-    console.log(`🗑️  Deleted audio file: ${filename}`);
+    console.log(`Deleted audio file: ${filename}`);
     res.json({ success: true, message: 'Audio file deleted' });
   } catch (error) {
-    console.error('❌ Error deleting audio file:', error);
+    console.error('Error deleting audio file:', error);
     res.status(500).json({ error: 'Failed to delete audio file' });
   }
 });
@@ -268,7 +268,7 @@ app.get('/api/health', (req, res) => {
 
 // Error handling middleware
 app.use((err, req, res, next) => {
-  console.error('❌ Server error:', err.stack);
+  console.error('Server error:', err.stack);
   res.status(500).json({ error: 'Something went wrong!' });
 });
 
@@ -279,9 +279,9 @@ app.use((req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`🎵 Music Player Backend running on port ${PORT}`);
-  console.log(`📁 Uploads directory: ${uploadsDir}`);
-  console.log(`🌐 API available at: http://localhost:${PORT}/api`);
+  console.log(` Music Player Backend running on port ${PORT}`);
+  console.log(`Uploads directory: ${uploadsDir}`);
+  console.log(`API available at: http://localhost:${PORT}/api`);
   
   // Check FFmpeg availability on startup
   checkFFmpeg();
